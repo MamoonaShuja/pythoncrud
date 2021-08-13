@@ -3,7 +3,19 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello World")
+    dic = {
+        "stds" : {
+                "areesha" : "IT Eve",       
+                "tahira" : "IT Eve",
+                "noreen":  "IT MOR",
+                "asia" : "IT EVE",
+                "gull" : "IT EVE",
+                "javaryia" : "IT MOR"
+        },
+        'teacher' : "Mamoona",
+        "course" : "Django"
+    }
+    return render(request , "index.html" , dic)
 
 def hello(request):
     return HttpResponse("<h1>I am a hello function</h1>")
